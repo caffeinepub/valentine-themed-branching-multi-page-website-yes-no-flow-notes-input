@@ -1,0 +1,8 @@
+{
+  "frontend/src/index.css": "Global styles with Valentine-themed OKLCH color system, custom fonts (Playfair Display, Inter), slide transition keyframes for left/right screen changes, and gentle floating animations for decorative Yes/No elements on the first screen.",
+  "frontend/src/App.tsx": "Main app component managing Valentine flow screen state with slide transition support, tracking previous/current screens to determine slide direction for smooth left/right animations between screens.",
+  "frontend/src/components/valentine/ValentineLayout.tsx": "Shared layout wrapper providing Valentine-themed background with generated images, gradient overlay, decorative hearts, and footer with attribution.",
+  "frontend/src/components/valentine/Screens.tsx": "All Valentine flow screen components (FirstScreen with floating decorative Yes/No elements, NoScreen with note input, YesStep1, YesStep2, YesFinal) with exact text content and button interactions, removing per-screen fade animations in favor of centralized slide transitions.",
+  "frontend/tailwind.config.js": "Tailwind configuration extended with custom fonts (Playfair Display, Inter) and Valentine-themed design tokens.",
+  "frontend/src/components/valentine/ScreenTransition.tsx": "Wrapper component that applies slide-in animations (left or right) to screen content based on navigation direction, providing smooth transitions between Valentine flow screens."
+}

@@ -1,0 +1,45 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-add-animated-slide-transitions-between-screens-when-the-user-navigates-through-the-valentine-flow-first-no-first-yes-step-1-yes-step-2-yes-final-while-keeping-the-app-as-a-single-page-react-app-that-switches-screens-via-in-app-state-no-url-routing",
+      "featureTitle": "Add animated slide transitions between screens when the user navigates through the Valentine flow (First -> No, First -> Yes Step 1 -> Yes Step 2 -> Yes Final), while keeping the app as a single-page React app that switches screens via in-app state (no URL routing).",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/valentine/ScreenTransition.tsx",
+        "frontend/src/components/valentine/Screens.tsx",
+        "frontend/src/index.css"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-7"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-subtle-floating-animated-yes-and-no-decorative-elements-to-enhance-the-valentine-theme-without-interfering-with-usability-e-g-floating-badges-text-near-the-buttons-or-as-background-decorations-on-the-first-screen",
+      "featureTitle": "Add subtle floating animated 'Yes' and 'No' decorative elements to enhance the Valentine theme without interfering with usability (e.g., floating badges/text near the buttons or as background decorations on the first screen).",
+      "files": [
+        "frontend/src/components/valentine/Screens.tsx",
+        "frontend/src/index.css"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-8"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

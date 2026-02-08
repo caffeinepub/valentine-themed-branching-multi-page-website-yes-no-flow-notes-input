@@ -1,0 +1,67 @@
+{
+  "kind": "build_request",
+  "title": "Add slide transitions and floating Yes/No animations to the Valentine SPA",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-7",
+      "text": "Add animated slide transitions between screens when the user navigates through the Valentine flow (First -> No, First -> Yes Step 1 -> Yes Step 2 -> Yes Final), while keeping the app as a single-page React app that switches screens via in-app state (no URL routing).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-7"
+        ],
+        "quotes": [
+          "add some animation like slides"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Changing the current screen triggers a visible slide-style transition (not only a fade) between the outgoing and incoming screen content.",
+        "All existing screen content, buttons, and behaviors remain unchanged (Yes/No branching and the notes save behavior still work).",
+        "Transitions are smooth and do not cause layout jumping; the content remains centered within the existing ValentineLayout."
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "text": "Add subtle floating animated 'Yes' and 'No' decorative elements to enhance the Valentine theme without interfering with usability (e.g., floating badges/text near the buttons or as background decorations on the first screen).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-7"
+        ],
+        "quotes": [
+          "floating yes or no"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The first screen displays decorative 'Yes' and 'No' elements that float/drift gently using CSS animation.",
+        "Floating elements do not block clicks/taps on the real Yes/No buttons (pointer interactions remain reliable).",
+        "Animations are subtle and consistent with the existing Valentine color theme and styling."
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not modify any files under frontend/src/components/ui or other paths listed as immutable in SYSTEM_CONTEXT.",
+    "Keep the screen navigation implemented via React in-app state (no URL routing).",
+    "Do not introduce new backend functionality; keep all changes frontend-only."
+  ],
+  "nonGoals": [
+    "Adding background music or audio features.",
+    "Persisting the note to the backend or to a database (notes remain UI-local behavior as currently implemented).",
+    "Adding new screens or changing the provided message text content beyond animation/visual enhancements."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  },
+  "userProfileUpdate": {
+    "goalsToAdd": [],
+    "goalsToRemove": [],
+    "preferencesToAdd": [],
+    "preferencesToRemove": [],
+    "miscToAdd": [],
+    "miscToRemove": [],
+    "fieldsToSet": {},
+    "fieldsToDelete": []
+  }
+}

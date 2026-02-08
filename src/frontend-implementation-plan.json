@@ -1,0 +1,59 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Valentine SPA: slide screen transitions + floating Yes/No decorations",
+  "requirements": [
+    {
+      "id": "REQ-7",
+      "summary": "Add smooth slide-style transitions between Valentine flow screens while keeping state-based (non-routed) navigation and preserving all existing behaviors.",
+      "acceptanceCriteria": [
+        "Changing the current screen triggers a visible slide-style transition (not only a fade) between the outgoing and incoming screen content.",
+        "All existing screen content, buttons, and behaviors remain unchanged (Yes/No branching and the notes save behavior still work).",
+        "Transitions are smooth and do not cause layout jumping; the content remains centered within the existing ValentineLayout."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/valentine/ScreenTransition.tsx",
+          "operation": "create",
+          "description": "Create a small transition wrapper component that renders the active screen content with slide-in/slide-out animation classes (and optional subtle opacity), keeping layout size stable (no jumping) and supporting state-driven screen changes (no URL routing)."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wrap the conditional screen render with the new ScreenTransition component; track previous/current screen and derive slide direction for the Valentine flow (First -> No, First -> Yes Step 1 -> Yes Step 2 -> Yes Final) without changing existing click handlers or note save behavior."
+        },
+        {
+          "path": "frontend/src/components/valentine/Screens.tsx",
+          "operation": "modify",
+          "description": "Remove or neutralize per-screen fade-only entrance animation wrappers so transitions are consistently controlled by the central ScreenTransition slide animation (leave all text, layout, buttons, and note behavior unchanged)."
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Add CSS keyframes/classes for slide transitions (enter/exit from left/right) tuned for smoothness (e.g., easing, duration) and layout stability (e.g., transform-based animations, stable container sizing)."
+        }
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "summary": "Add subtle floating decorative 'Yes' and 'No' animated elements on the first screen that match the Valentine theme and never interfere with button interactions.",
+      "acceptanceCriteria": [
+        "The first screen displays decorative 'Yes' and 'No' elements that float/drift gently using CSS animation.",
+        "Floating elements do not block clicks/taps on the real Yes/No buttons (pointer interactions remain reliable).",
+        "Animations are subtle and consistent with the existing Valentine color theme and styling."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/valentine/Screens.tsx",
+          "operation": "modify",
+          "description": "Enhance FirstScreen by adding decorative 'Yes'/'No' elements (e.g., badges/text) positioned around/behind the button area; ensure they use pointer-events: none and appropriate z-index so real buttons remain fully clickable."
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Add gentle floating/drifting keyframes and utility classes for the decorative 'Yes'/'No' elements (subtle motion, low opacity, theme-consistent colors), ensuring animations remain unobtrusive and do not affect layout."
+        }
+      ]
+    }
+  ]
+}

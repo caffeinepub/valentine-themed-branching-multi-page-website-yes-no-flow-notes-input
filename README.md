@@ -1,2 +1,3 @@
-# valentine-themed-branching-multi-page-website-yes-no-flow-notes-input
-Exported from Caffeine project: Valentine-themed branching multi-page website (Yes/No flow + notes input)
+## 
+
+To run app build and run docker image: `docker build -t app . docker run -it --network host app`

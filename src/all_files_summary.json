@@ -1,0 +1,17 @@
+{
+  "backend/main.mo": "Empty Motoko actor with no functions.",
+  "feature_evidence.json": "Feature evidence listing Valentine UI transition and decoration features with related files and metadata.",
+  "frontend-file-summaries.txt": "Prewritten summaries of key frontend files including transitions, screens, layout, and styling.",
+  "frontend/index.css": "Tailwind base file defining OKLCH color tokens, dark mode variants, and global element styling.",
+  "frontend/index.html": "HTML entry mounting the React app and loading main.tsx.",
+  "frontend/src/App.tsx": "Main React app controlling Valentine screen flow and slide transitions based on navigation order.",
+  "frontend/src/components/valentine/Screens.tsx": "React components for all Valentine flow screens with floating decorations, inputs, and button handlers.",
+  "frontend/src/components/valentine/ScreenTransition.tsx": "Wrapper applying left or right slide-in animation classes to screen content.",
+  "frontend/src/components/valentine/ValentineLayout.tsx": "Layout wrapper providing background image, gradient overlay, decorative hearts, and footer.",
+  "frontend/src/hooks/useActor.ts": "Hook creating and refreshing backend actors based on Internet Identity authentication state.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Context and hooks managing Internet Identity login, stored identities, and auth client setup.",
+  "frontend/src/index.css": "Tailwind setup with extensive OKLCH theme variables for light/dark modes, custom fonts, and several animation keyframes for slides and floating effects.",
+  "frontend/src/main.tsx": "Bootstraps the React app with QueryClientProvider and InternetIdentityProvider and loads the root App component.",
+  "frontend/tailwind.config.js": "Configures Tailwind with extended OKLCH-based colors, typography, container queries, animations, and custom radius and shadows.",
+  "project_state.json": "Tracks project metadata, versioning, features, and architectural notes for a Valentine‑themed SPA with branching Yes/No flows."
+}
